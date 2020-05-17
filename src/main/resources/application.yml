@@ -1,0 +1,21 @@
+spring:
+  h2:
+    console:
+      enabled: true  # H2 웹 콘솔을 사용하겠다는 의미
+      path: /test_db 
+  datasource:
+    platform: test
+    initialization-mode: always
+    driver-class-name: org.h2.Driver
+    #url: jdbc:h2:file:./data/sample;INIT=RUNSCRIPT FROM 'classpath:/schema.sql'    
+    #url: jdbc:h2:file:./data/sample;AUTO_SERVER=TRUE;INIT=RUNSCRIPT FROM 'classpath:/schema.sql'    
+    url: jdbc:h2:mem:./data/sample;INIT=RUNSCRIPT FROM 'classpath:/schema.sql' 
+    username: sa
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: none
+search:
+  kakao:
+    domain: https://dapi.kakao.com
+    book: /v3/search/book
