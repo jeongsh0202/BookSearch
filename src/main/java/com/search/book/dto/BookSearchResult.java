@@ -1,44 +1,27 @@
 package com.search.book.dto;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+public interface BookSearchResult {
+	
+	public abstract String getTitle();
+	
+	public abstract String getUrl();
+	
+	public abstract String getThumbnail();
 
-@Getter
-@Setter
-@ToString
-public class BookSearchResult implements Serializable {
+	public abstract String getAuthors();
 	
-	private static final long serialVersionUID = -4496540216537599075L;
+	public abstract String getContents();
 	
-	private String[] authors;
+	public abstract String getDateTime();
 	
-	private String contents;
+	public abstract String getIsbn();
 	
-	private LocalDateTime datetime;
+	public abstract BigDecimal getPrice();
 	
-	private String isbn;
+	public abstract String getPublisher();
 	
-	private BigDecimal price;
-	
-	private String publisher;
-	
-	private BigDecimal sale_price;
-
-	private String status;
-	
-	private String thumbnail;
-	
-	private String title;
-	
-	private String[] translators;
-	
-	private String url;
-	
-	
+	public abstract BigDecimal getSalePrice();
 	
 }

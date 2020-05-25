@@ -21,7 +21,7 @@ class ApplicationTests {
 	@Test
 	public void getBookList() {
 		String target = "미움받을 용기";
-		List<BookSearchResult> selectBookList = bookService.selectBookList(target);
+		List<BookSearchResult> selectBookList = bookService.selectKakaoBookList(target);
 		
 		log.debug("book search result: {}", selectBookList);
 	}
